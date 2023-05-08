@@ -127,5 +127,22 @@ class Raise(NoDynamicAttributes):
         """
         return SyntaxError(cls.message(message, class_name, currentframe))
 
+    @classmethod
+    def type_error(
+        cls,
+        message: str,
+        class_name: str = "",
+        currentframe: Optional[FrameType] = None,
+    ) -> TypeError:
+        """Return TypeError exception with formatted string.
+
+        message: str - message to format
+        class_name: str - caller class name (self.__class__.__name__)
+        currentframe: FrameType - object from inspect.currentframe()
+
+        Return: TypeError
+        """
+        return TypeError(cls.message(message, class_name, currentframe))
+
 
 # #[EOF]#######################################################################
