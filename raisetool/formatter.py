@@ -57,5 +57,24 @@ class Raise(NoDynamicAttributes):
         """
         return AttributeError(cls.message(message, class_name, currentframe))
 
+    @classmethod
+    def connection_error(
+        cls,
+        message: str,
+        class_name: str = "",
+        currentframe: Optional[FrameType] = None,
+    ) -> ConnectionError:
+        """Return ConnectionError exception with formatted string.
+
+        message: str - message to format
+        class_name: str - caller class name (self.__class__.__name__)
+        currentframe: FrameType - object from inspect.currentframe()
+
+        Return: ConnectionError
+        """
+        return ConnectionError(
+            cls.message(message, class_name, currentframe)
+        )
+
 
 # #[EOF]#######################################################################
