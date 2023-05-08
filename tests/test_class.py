@@ -3,7 +3,7 @@
   Author:  Jacek Kotlarski --<szumak@virthost.pl>
   Created: 08.05.2023
 
-  Purpose:
+  Purpose: For testing Raise class
 """
 
 import unittest

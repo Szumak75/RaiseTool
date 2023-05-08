@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "raisetool"
 version = "0.1.0"
-description = "Small class"
+description = "Rise class for formatting thrown exception messages."
 authors = ["Jacek Kotlarski <szumak@virthost.pl>"]
 license = "MIT"
 readme = "README.md"
