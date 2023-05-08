@@ -40,5 +40,22 @@ class Raise(NoDynamicAttributes):
         template = f"{class_name}.{template}"
         return template
 
+    @classmethod
+    def attribute_error(
+        cls,
+        message: str,
+        class_name: str = "",
+        currentframe: Optional[FrameType] = None,
+    ) -> AttributeError:
+        """Return AttributeError exception with formatted string.
+
+        message: str - message to format
+        class_name: str - caller class name (self.__class__.__name__)
+        currentframe: FrameType - object from inspect.currentframe()
+
+        Return: AttributeError
+        """
+        return AttributeError(cls.message(message, class_name, currentframe))
+
 
 # #[EOF]#######################################################################

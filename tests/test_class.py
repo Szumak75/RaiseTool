@@ -51,5 +51,9 @@ class TestRaise(unittest.TestCase):
             "TestRaise.test_returning_message_from_class [line:46]: test",
         )
 
+    def test_returning_attribute_error(self):
+        """Test nr 4."""
+        self.assertIsInstance(Raise.attribute_error("test"), AttributeError)
+
 
 # #[EOF]#######################################################################
