@@ -76,5 +76,22 @@ class Raise(NoDynamicAttributes):
             cls.message(message, class_name, currentframe)
         )
 
+    @classmethod
+    def key_error(
+        cls,
+        message: str,
+        class_name: str = "",
+        currentframe: Optional[FrameType] = None,
+    ) -> KeyError:
+        """Return KeyError exception with formatted string.
+
+        message: str - message to format
+        class_name: str - caller class name (self.__class__.__name__)
+        currentframe: FrameType - object from inspect.currentframe()
+
+        Return: KeyError
+        """
+        return KeyError(cls.message(message, class_name, currentframe))
+
 
 # #[EOF]#######################################################################
