@@ -55,5 +55,31 @@ class TestRaise(unittest.TestCase):
         """Test nr 4."""
         self.assertIsInstance(Raise.attribute_error("test"), AttributeError)
 
+    def test_returning_connection_error(self):
+        """Test nr 5."""
+        self.assertIsInstance(
+            Raise.connection_error("test"), ConnectionError
+        )
+
+    def test_returning_key_error(self):
+        """Test nr 6."""
+        self.assertIsInstance(Raise.key_error("test"), KeyError)
+
+    def test_returning_os_error(self):
+        """Test nr 7."""
+        self.assertIsInstance(Raise.os_error("test"), OSError)
+
+    def test_returning_syntax_error(self):
+        """Test nr 8."""
+        self.assertIsInstance(Raise.syntax_error("test"), SyntaxError)
+
+    def test_returning_type_error(self):
+        """Test nr 9."""
+        self.assertIsInstance(Raise.type_error("test"), TypeError)
+
+    def test_returning_value_error(self):
+        """Test nr 10."""
+        self.assertIsInstance(Raise.value_error("test"), ValueError)
+
 
 # #[EOF]#######################################################################
