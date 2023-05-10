@@ -2,14 +2,14 @@
 
 [[package]]
 name = "attribtool"
-version = "1.0.1"
+version = "1.0.4"
 description = "Base classes for restricting the creation of dynamic attributes on instances of derived types."
 category = "main"
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "attribtool-1.0.1-py3-none-any.whl", hash = "sha256:46879e7848c37569c2c9657f4ae474a03d69ada018f14a123bbd1e8ff1cb280c"},
-    {file = "attribtool-1.0.1.tar.gz", hash = "sha256:26dd18a27c71a1158a2e4c954f44e07611f1c0df529c5a53b3ca08c1a3add2f3"},
+    {file = "attribtool-1.0.4-py3-none-any.whl", hash = "sha256:45d6d616f86e4ac084c04ff70e1d5df3bb89091e4e81a9c728ef1da906e02727"},
+    {file = "attribtool-1.0.4.tar.gz", hash = "sha256:672d9509cd27d01bc60f62754d27133e3fc62263883ce8a65d4305a8a21c371f"},
 ]
 
 [[package]]
@@ -327,4 +327,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "8bdeac163a17c2221c469fb29927b6e3d588f58af0942f19df8a2e94c26a5077"
+content-hash = "d1ff9a5be4a9f2756d2737f1eafee976141f48948e9682b245c570651c4d9d94"
