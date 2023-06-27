@@ -81,5 +81,15 @@ class TestRaise(unittest.TestCase):
         """Test nr 10."""
         self.assertIsInstance(Raise.value_error("test"), ValueError)
 
+    def test_returning_index_error(self):
+        """Test nr 11."""
+        self.assertIsInstance(Raise.index_error("test"), IndexError)
+
+    def test_returning_not_implemented_error(self):
+        """Test nr 12."""
+        self.assertIsInstance(
+            Raise.not_implemented_error("test"), NotImplementedError
+        )
+
 
 # #[EOF]#######################################################################

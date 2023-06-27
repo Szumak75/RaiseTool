@@ -79,6 +79,23 @@ class Raise(NoDynamicAttributes):
         )
 
     @classmethod
+    def index_error(
+        cls,
+        message: str,
+        class_name: str = "",
+        currentframe: Optional[FrameType] = None,
+    ) -> IndexError:
+        """Return IndexError exception with formatted string.
+
+        message: str - message to format
+        class_name: str - caller class name (self.__class__.__name__)
+        currentframe: FrameType - object from inspect.currentframe()
+
+        Return: IndexError
+        """
+        return IndexError(cls.message(message, class_name, currentframe))
+
+    @classmethod
     def key_error(
         cls,
         message: str,
@@ -94,6 +111,25 @@ class Raise(NoDynamicAttributes):
         Return: KeyError
         """
         return KeyError(cls.message(message, class_name, currentframe))
+
+    @classmethod
+    def not_implemented_error(
+        cls,
+        message: str,
+        class_name: str = "",
+        currentframe: Optional[FrameType] = None,
+    ) -> NotImplementedError:
+        """Return NotImplementedError exception with formatted string.
+
+        message: str - message to format
+        class_name: str - caller class name (self.__class__.__name__)
+        currentframe: FrameType - object from inspect.currentframe()
+
+        Return: NotImplementedError
+        """
+        return NotImplementedError(
+            cls.message(message, class_name, currentframe)
+        )
 
     @classmethod
     def os_error(
